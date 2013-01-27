@@ -31,14 +31,12 @@ class Module
 		return array(
 			'factories' => array(
 				'piwikAnalytics' => function($sm) {
-					return new PiwikAnalytics(
-						$sm->getServiceLocator()->get('Config')['webanalytics']['piwik']
-					);
+					$config = $sm->getServiceLocator()->get('Config');
+					return new PiwikAnalytics($config['webanalytics']['piwik']);
 				},
 				'googleAnalytics' => function($sm) {
-					return new GoogleAnalytics(
-						$sm->getServiceLocator()->get('Config')['webanalytics']['google']
-					);
+					$config = $sm->getServiceLocator()->get('Config');
+					return new GoogleAnalytics($config['webanalytics']['google']);
 				},
 			),
 		);
