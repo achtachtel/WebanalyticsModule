@@ -1,0 +1,15 @@
+<?php
+
+return array(
+	'webanalytics' => array(
+		'google' => array(
+			'enabled' => false, //Enable GoogleAnalytics
+			'id' => '', // GoogleAnalytics Tracking ID
+		),
+		'piwik' => array(
+			'enabled' => false,
+			'id' => , //Piwik site ID
+			'piwik_domain' => '', //Domain name of Piwik installation e.g. example.org
+		),
+	),
+);
