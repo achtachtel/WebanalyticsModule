@@ -11,13 +11,17 @@
             "role": "Developer"
         }
     ],
+    "minimum-stability": "dev",
     "require": {
         "php": ">=5.3.3",
         "zendframework/zendframework": "2.*"
     },
     "autoload": {
         "psr-0": {
-            "WebanalyticsModule\\": "src/"
+            "WebanalyticsModule": "src/"
         }
+        "classmap" : [ 
+            "./Module.php" 
+        ]
     }
 }
