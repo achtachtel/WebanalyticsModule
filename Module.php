@@ -32,11 +32,19 @@ class Module
 			'factories' => array(
 				'piwikAnalytics' => function($sm) {
 					$config = $sm->getServiceLocator()->get('Config');
-					return new PiwikAnalytics($config['webanalytics']['piwik']);
+					if (isset($config['webanalytics']['piwik'])) {
+						return new PiwikAnalytics($config['webanalytics']['piwik']);
+					} else {
+						return new PiwikAnalytics();
+					}
 				},
 				'googleAnalytics' => function($sm) {
 					$config = $sm->getServiceLocator()->get('Config');
-					return new GoogleAnalytics($config['webanalytics']['google']);
+					if (isset($config['webanalytics']['google'])) {
+						return new GoogleAnalytics($config['webanalytics']['google']);
+					} else {
+						return new GoogleAnalytics();
+					}
 				},
 			),
 		);
