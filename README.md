@@ -11,4 +11,4 @@ Insert these two lines anywhere in your layout. (Best place is right before the 
     <?php echo $this->piwikAnalytics()->getTrackingCode(); ?>
 
 ## More Information
-Visit <http://achtachtel.de/projects/webanalytics_module>
+Visit <http://achtachtel.de/projects/webanalytics_module/>
