@@ -1,5 +1,5 @@
 {
-    "name": "achtachtel/WebanalyticsModule",
+    "name": "achtachtel/webanalytics-module",
     "type": "library",
     "description": "ZF2 Module for GoogleAnalytics and/or Piwik",
     "license": "GPLv3",
